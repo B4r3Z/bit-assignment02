@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "satoshiMid";
+  src: url(/css/fonts/Satoshi-Medium.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "satoshiMidIta";
+  src: url(/css/fonts/Satoshi-MediumItalic.ttf);
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cubano";
+  src: url(/css/fonts/Cubano.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin-top: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+body {
+  background-color: #ededeb;
+}
+
+.navbar {
+  font-size: 1.1rem;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  background-color: #35393c;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.navbar ul {
+  width: 100%;
+  list-style: none;
+  font-family: Cubano;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar ul a {
+  color: #fffbf7;
+  text-decoration: none;
+}
+
+.navbar ul a:hover {
+  color: #dac5b3;
+  border-bottom: 3px solid #dac5b3;
+  padding-bottom: 3px;
+  border-radius: 3px;
+}
+
+.hero {
+  display: grid;
+  grid-column: span 4;
+}
+.hero img {
+  width: 100%;
+}
+
+.content {
+  display: grid;
+  grid-column: span 4;
+  grid-row: span 1;
+  padding-bottom: 50px;
+}
+.content img {
+  width: 100%;
+}
+
+.texts {
+  display: grid;
+  justify-items: center;
+}
+
+h2 {
+  color: #35393c;
+  font-family: Cubano;
+  font-size: 2rem;
+  padding-bottom: 15px;
+}
+
+h3 {
+  color: #35393c;
+  font-family: Cubano;
+  font-size: 20px;
+}
+
+.description {
+  grid-column: span 1;
+  width: 75%;
+}
+
+.description p {
+  font-family: satoshiMid;
+  font-size: 1.2rem;
+}
+
+.reviews {
+  text-align: right;
+  grid-column: 3/4;
+  /*   grid-column: unset; */
+  width: 75%;
+}
+
+.reviews p {
+  font-family: satoshiMidIta;
+  font-size: 1.2rem;
+}
+
+.cast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 20px 40px;
+  grid-area: 4 / 1 / 4 / 5;
+  font-family: Cubano;
+}
+
+.cast figure {
+  scroll-snap-align: center;
+}
+.cast img {
+  height: 350px;
+  object-fit: contain;
+  max-width: none;
+}
+
+.cast h3 {
+  font-size: 3rem;
+}
+
+.cast h4 {
+  font-size: 1.5rem;
+  color: #782e2d;
+}
+.michelle {
+  grid-area: 4 / 1 / 4 / 2;
+}
+.ke {
+  grid-area: 4 / 2 / 4 / 3;
+}
+.steph {
+  grid-area: 4 / 3 / 4 / 4;
+}
+.rock {
+  grid-area: 4 / 4 / 4 / 5;
+}
+
+footer {
+  color: #fffbf7;
+  font-family: Cubano;
+  width: 100%;
+  height: 3rem;
+  z-index: 10;
+  background-color: #35393c;
+  padding: 1rem;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer li {
+  list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+  .reviews {
+    grid-column: unset;
+  }
+}
